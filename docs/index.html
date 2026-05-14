@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah - AI Applications & Data Analysis Engineer</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --accent: #2b6cb0;
+            --light: #edf2f7;
+            --bg: #ffffff;
+            --text: #2d3748;
+            --muted: #718096;
+            --card: #f7fafc;
+            --border: #e2e8f0;
+            --tag-bg: #ebf4ff;
+            --tag-text: #2c5282;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        /* Nav */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 0 24px;
+        }
+        nav .inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+        }
+        nav .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
+        nav .links { display: flex; gap: 24px; list-style: none; }
+        nav .links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav .links a:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            padding: 140px 24px 80px;
+            text-align: center;
+            background: linear-gradient(160deg, #ebf8ff 0%, #f7fafc 40%, #ffffff 100%);
+        }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
+        .hero .subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 500; margin-bottom: 16px; }
+        .hero .tagline {
+            max-width: 600px;
+            margin: 0 auto 24px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .hero .cta {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .hero .cta:hover { background: #1a5a8a; }
+
+        /* Sections */
+        section { padding: 64px 24px; }
+        section:nth-child(even) { background: var(--card); }
+        .container { max-width: 900px; margin: 0 auto; }
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .section-title { font-size: 1.8rem; font-weight: 700; color: var(--primary); margin-bottom: 32px; }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .about-text { font-size: 0.95rem; color: var(--text); }
+        .about-text p { margin-bottom: 12px; }
+        .info-list { list-style: none; }
+        .info-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.88rem;
+        }
+        .info-list .label { color: var(--muted); min-width: 80px; font-weight: 500; }
+
+        /* Experience */
+        .timeline { position: relative; padding-left: 24px; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 2px;
+            background: var(--border);
+        }
+        .timeline-item { position: relative; margin-bottom: 32px; padding-left: 24px; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 4px; }
+        .timeline-role { font-weight: 700; font-size: 1rem; color: var(--primary); }
+        .timeline-date { font-size: 0.78rem; color: var(--muted); background: var(--tag-bg); padding: 2px 10px; border-radius: 20px; }
+        .timeline-company { font-weight: 600; color: var(--accent); font-size: 0.88rem; margin-bottom: 8px; }
+        .timeline-desc { font-size: 0.88rem; color: var(--text); }
+        .timeline-desc li { margin-bottom: 5px; }
+
+        /* Skills */
+        .skill-group { margin-bottom: 24px; }
+        .skill-group-name { font-weight: 700; font-size: 0.88rem; color: var(--accent); margin-bottom: 8px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        /* Projects */
+        .project-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s;
+        }
+        .project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+        .project-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 6px; }
+        .project-name { font-weight: 700; font-size: 1.05rem; color: var(--primary); }
+        .project-tech { font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+
+        /* Contact */
+        .contact { text-align: center; }
+        .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .contact-link:hover { background: #d6e4f5; }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 650px) {
+            .hero h1 { font-size: 2rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            nav .links { gap: 14px; }
+            nav .links a { font-size: 0.78rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="inner">
+        <span class="logo">Jonah</span>
+        <ul class="links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Jonah</h1>
+    <p class="subtitle">AI Applications / Data Analysis Engineer</p>
+    <p class="tagline">
+        Experienced in sales analytics, customer segmentation, and AI-powered solutions.
+        Bridging data analysis with LLM applications to deliver production-ready systems.
+    </p>
+    <a href="#contact" class="cta">Get in Touch</a>
+</section>
+
+<section id="about">
+    <div class="container">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Who I Am</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    Data Analyst with 1.5 years of AI application development and 2 years of data analysis experience,
+                    currently working in the manufacturing industry. I specialize in transforming raw business data into
+                    actionable insights and building AI-powered automation workflows.
+                </p>
+                <p>
+                    Proficient with Pandas/NumPy for end-to-end data processing, familiar with LLM APIs (Tongyi Qianwen, DeepSeek)
+                    and Dify for lightweight AI tasks, and capable of wrapping services with FastAPI and deploying with Docker.
+                </p>
+            </div>
+            <ul class="info-list">
+                <li><span class="label">Location</span> <strong>Jiangmen, Guangdong</strong></li>
+                <li><span class="label">Email</span> <strong>1625963557@qq.com</strong></li>
+                <li><span class="label">English</span> <strong>CET-6</strong></li>
+                <li><span class="label">Education</span> <strong>NUST · BSc</strong></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="container">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Work History</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-role">Data Analyst (AI Applications)</span>
+                    <span class="timeline-date">2024.08 – Present</span>
+                </div>
+                <div class="timeline-company">Johnson Electric · Manufacturing</div>
+                <ul class="timeline-desc">
+                    <li>Owned sales analytics: extracted data from SQL Server/Excel, cleaned with Pandas, delivered Power BI dashboards</li>
+                    <li>Built Azure OpenAI knowledge-base Q&A for sales policies and product manuals (chunking, embedding, retrieval)</li>
+                    <li>Designed Power Automate workflows for automated reporting and data syncing, saving ~15 hours/week</li>
+                    <li>Collaborated with sales teams to clarify data requirements and explain analysis limitations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Featured Work</h2>
+
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-name">Document Classification & Entity Extraction with LLMs</span>
+                <span class="timeline-date">2026.01 – Present</span>
+            </div>
+            <ul class="timeline-desc">
+                <li>Built Dify workflows calling Tongyi Qianwen to extract fields from sales contracts — ~90% accuracy</li>
+                <li>Used DeepSeek API for lead scoring (high/medium/low intent) to prioritize sales follow-ups</li>
+                <li>Integrated workflows into internal management portal for sales users</li>
+            </ul>
+            <p class="project-tech">Tech: Dify, Tongyi Qianwen API, DeepSeek API, FastAPI</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-name">RFM Customer Value Analysis</span>
+                <span class="timeline-date">2025.02 – Present</span>
+            </div>
+            <ul class="timeline-desc">
+                <li>Cleaned ~50k sales orders (3 years): deduplication, 3σ outlier filtering, missing value imputation</li>
+                <li>Segmented customers into high-value, potential, and churn groups; delivered Excel reports</li>
+                <li>Created trend and contribution charts with Matplotlib/Seaborn</li>
+            </ul>
+            <p class="project-tech">Tech: Pandas, NumPy, Matplotlib, SQL</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-name">Regional Sales Forecasting (Regression)</span>
+                <span class="timeline-date">2025.04 – 2025.07</span>
+            </div>
+            <ul class="timeline-desc">
+                <li>Engineered time/lag features and built XGBoost regression model — MAPE ~18%</li>
+                <li>Exposed FastAPI endpoint for planners to query forecasts; provided feature-importance analysis</li>
+            </ul>
+            <p class="project-tech">Tech: Pandas, Scikit-learn, XGBoost, FastAPI</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-name">Data Pipeline & API Wrapping</span>
+                <span class="timeline-date">2025.10 – 2025.11</span>
+            </div>
+            <ul class="timeline-desc">
+                <li>Built reusable ETL templates for CSV/Excel cleaning; exposed cleaning logic via FastAPI</li>
+                <li>Containerized with Docker and validated endpoints with Postman</li>
+            </ul>
+            <p class="project-tech">Tech: Python, Pandas, FastAPI, Docker, Git</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">Tech Stack</h2>
+
+        <div class="skill-group">
+            <p class="skill-group-name">Data Processing & Analysis</p>
+            <div class="skill-tags">
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Matplotlib/Seaborn</span>
+                <span class="skill-tag">SQL (MySQL/PostgreSQL)</span>
+                <span class="skill-tag">Advanced Excel</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <p class="skill-group-name">Machine Learning & AI</p>
+            <div class="skill-tags">
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">XGBoost / LightGBM</span>
+                <span class="skill-tag">Classification / Regression</span>
+                <span class="skill-tag">Feature Engineering</span>
+                <span class="skill-tag">Dify</span>
+                <span class="skill-tag">Tongyi Qianwen / DeepSeek API</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <p class="skill-group-name">Engineering & Tools</p>
+            <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Power Automate</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Get in Touch</h2>
+        <p style="color: var(--muted); margin-bottom: 8px;">Interested in working together? Reach out via email.</p>
+        <div class="contact-links">
+            <a href="mailto:1625963557@qq.com" class="contact-link">&#9993; Email</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Jonah. Built with HTML & CSS.
+</footer>
+
+</body>
+</html>

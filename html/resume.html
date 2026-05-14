@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Jiang Bo - AI Applications / Data Analysis Engineer — Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #eef2f5;
+            font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1a2c3e;
+            padding: 40px 20px;
+        }
+        .resume {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #f6f8fb 0%, #eef2f5 100%);
+            color: #1a2c3e;
+            padding: 28px 32px;
+        }
+        .name { 
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .title {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .badge {
+            background: rgba(30,74,110,0.06);
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            color: #1e4a6e;
+        }
+        .summary {
+            font-size: 0.88rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 28px 32px;
+        }
+        .section {
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1e4a6e;
+            padding-left: 0.5rem;
+            margin-bottom: 14px;
+        }
+        .exp-item, .project-item {
+            margin-bottom: 20px;
+        }
+        .exp-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .exp-role {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #1e3a4a;
+        }
+        .exp-company {
+            font-weight: 600;
+            color: #2a6f8f;
+            font-size: 0.85rem;
+        }
+        .exp-date {
+            font-size: 0.7rem;
+            color: #6b7f8c;
+            background: #eef2f5;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+        .exp-desc, .project-desc {
+            padding-left: 12px;
+        }
+        ul {
+            margin: 6px 0 6px 18px;
+        }
+        li {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #2c3e44;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+        .skill-tag {
+            background: #e9f0f5;
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1e4a6e;
+        }
+        .skill-cat {
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            font-size: 0.8rem;
+            color: #2a5f7a;
+        }
+        hr {
+            margin: 16px 0;
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        .footer {
+            font-size: 0.7rem;
+            color: #6c7e8a;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 12px;
+        }
+        @media (max-width: 650px) {
+            .header, .content { padding: 20px; }
+            .name { font-size: 1.8rem; }
+        }
+            /* Ensure colors/backgrounds print where supported */
+            /* Many browsers still require "print background graphics" enabled in print dialog */
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            @media print {
+                /* force panel/background colors to print */
+                body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+                .resume { background: white !important; }
+                .header { background-color: #e6f4fa !important; }
+                .summary-text, .info-line, .skill-category, .project-item, .panel { background-color: inherit !important; }
+            }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <div class="header">
+        <div class="name">Jonah</div>
+        <div class="title">
+            <span>AI Applications / Data Analysis Engineer</span>
+            <span class="badge">1.5 years AI applications + 2 years data analysis</span>
+        </div>
+        <div class="summary">
+            ✔ Experienced in retail and manufacturing sales analytics: trend analysis, customer segmentation, sales forecasting, and performance attribution.<br>
+            ✔ Proficient with Pandas/NumPy for data cleaning, missing value handling and feature engineering; able to deliver end-to-end solutions from extraction to reports/models.<br>
+            ✔ Familiar with large-model APIs (Tongyi Qianwen, DeepSeek) and Dify tools for lightweight AI tasks such as classification, entity extraction and knowledge-base Q&A.<br>
+            ✔ Able to wrap services with FastAPI and deploy with Docker; experienced in delivering production-ready solutions.
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Work Experience -->
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Data Analyst (AI Applications)</span>
+                    <span class="exp-date">2024.08 – Present</span>
+                </div>
+                <div class="exp-company">Johnson Electric · Manufacturing</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Owned sales analytics for the sales department: extracted orders and customer data from SQL Server and Excel, cleaned data with Pandas (deduplication, missing-value imputation, outlier filtering) and produced daily/weekly reports and Power BI dashboards.</li>
+                        <li>Built an Azure OpenAI-based knowledge-base Q&A system for retrieving sales policies and product manuals, reducing internal inquiry time. Core responsibilities: document parsing, chunking, embedding generation and retrieval tuning.</li>
+                        <li>Designed Power Automate workflows (e.g., automated report delivery, sales data syncing), saving ~15 manual hours per week.</li>
+                        <li>Collaborated with sales teams to clarify data requirements, evaluated feasibility and explained analysis limitations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects (focused on sales analytics) -->
+        <div class="section">
+            <div class="section-title">Projects</div>
+
+            <div class="project-item">
+                <div class="exp-header">
+                    <span class="exp-role">Sales Data Cleaning & Customer Value Analysis (RFM)</span>
+                    <span class="exp-date">2025.02 – Present</span>
+                </div>
+                <div class="project-desc">
+                    <ul>
+                        <li>Exported ~50k sales orders from ERP (3 years) and cleaned data with Pandas: deduplication, outlier filtering (beyond 3σ) and missing customer info imputation.</li>
+                        <li>Calculated RFM metrics (Recency, Frequency, Monetary) and segmented customers into high-value, potential, churn groups; delivered Excel reports for sales teams.</li>
+                        <li>Created sales trend and contribution charts with Matplotlib/Seaborn; identified declining activity among certain high-value customers and recommended follow-up.</li>
+                    </ul>
+                    <p style="font-size:0.8rem; margin-top:4px; color:#4a6a7a;">Tech: Pandas, NumPy, Matplotlib, SQL</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="exp-header">
+                    <span class="exp-role">Regional Sales Forecasting (Regression)</span>
+                    <span class="exp-date">2025.04 – 2025.07</span>
+                </div>
+                <div class="project-desc">
+                    <ul>
+                        <li>Cleaned historical sales data by region and product line, engineered time features (month, quarter, promo flags) and lag features.</li>
+                        <li>Built XGBoost regression models to forecast next-month sales per region; achieved MAPE ~18%.</li>
+                        <li>Saved models as pickle files and exposed a FastAPI endpoint for planners to query forecasts.</li>
+                        <li>Provided feature-importance analysis to help the sales team understand drivers (promotions, seasonality).</li>
+                    </ul>
+                    <p style="font-size:0.8rem; margin-top:4px; color:#4a6a7a;">Tech: Pandas, Scikit-learn, XGBoost, FastAPI</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="exp-header">
+                    <span class="exp-role">Document Classification & Entity Extraction using Dify + LLM APIs</span>
+                    <span class="exp-date">2026.01 – Present</span>
+                </div>
+                <div class="project-desc">
+                    <ul>
+                        <li>Built lightweight workflows in Dify and called Tongyi Qianwen API to extract key fields from sales contracts (customer name, contract value, validity), achieving ~90% accuracy and reducing manual entry.</li>
+                        <li>Used DeepSeek API for lead scoring (high/medium/low intent) to help sales prioritize follow-ups.</li>
+                        <li>Integrated workflows via API into an internal lightweight management portal for sales users.</li>
+                    </ul>
+                    <p style="font-size:0.8rem; margin-top:4px; color:#4a6a7a;">Tech: Dify, Tongyi Qianwen API, DeepSeek API, FastAPI</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="exp-header">
+                    <span class="exp-role">Data Pipeline & API Wrapping</span>
+                    <span class="exp-date">2025.10 – 2025.11</span>
+                </div>
+                <div class="project-desc">
+                    <ul>
+                        <li>Wrote Python scripts to read and clean CSV/Excel data (missing values, outliers), select features and export tidy CSVs as reusable ETL templates.</li>
+                        <li>Packaged cleaning logic with FastAPI to support file upload and return processed results; wrote Dockerfiles and validated endpoints with Postman.</li>
+                    </ul>
+                    <p style="font-size:0.8rem; margin-top:4px; color:#4a6a7a;">Tech: Python, Pandas, FastAPI, Docker, Git</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data processing & engineering -->
+        <div class="section">
+            <div class="section-title">Data Processing & Engineering</div>
+            <div class="exp-desc">
+                <ul>
+                    <li>Use Pandas/NumPy for daily data cleaning: missing values, outliers, duplicates, type conversions and categorical encoding.</li>
+                    <li>Feature engineering for business problems, including group aggregations, pivot tables and time-series resampling.</li>
+                    <li>Familiar with basic statistical analysis (mean, variance, correlations) and creating visualizations to support decision-making.</li>
+                    <li>Build reusable ETL scripts in Python to ensure reproducible and maintainable data pipelines.</li>
+                    <li>Develop APIs with FastAPI, containerize with Docker, and follow basic testing and logging practices.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="section">
+            <div class="section-title">Tech Stack</div>
+            <div class="skill-cat">📊 Data Processing & Analysis</div>
+            <div class="skill-list">
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Matplotlib/Seaborn</span>
+                <span class="skill-tag">SQL (MySQL/PostgreSQL)</span>
+                <span class="skill-tag">Advanced Excel</span>
+            </div>
+            <div class="skill-cat">🤖 Machine Learning & AI</div>
+            <div class="skill-list">
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">XGBoost / LightGBM</span>
+                <span class="skill-tag">Classification / Regression / Clustering</span>
+                <span class="skill-tag">Feature Engineering</span>
+                <span class="skill-tag">Dify</span>
+                <span class="skill-tag">Tongyi Qianwen / DeepSeek API</span>
+            </div>
+            <div class="skill-cat">⚙️ Engineering & Tools</div>
+            <div class="skill-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Power Automate</span>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div><strong>Nanjing University of Science and Technology</strong> · BSc in Information and Computational Mathematics | 2019.09 – 2023.06</div>
+            <div style="margin-top: 6px; font-size:0.8rem; color:#4a627a;">📐 Interdisciplinary program covering mathematics and computing, with core courses in data analysis, algorithms, data structures and mathematical modeling.</div>
+            <div style="margin-top: 8px;"><span class="skill-tag">CET-6</span> <span class="skill-tag">Jiangmen, Guangdong</span></div>
+        </div>
+
+        <hr>
+        <div class="footer">
+            📌 Email: 1625963557@qq.com · Mobile: +86 158 9972 0072
+        </div>
+    </div>
+</div>
+</body>
+</html>

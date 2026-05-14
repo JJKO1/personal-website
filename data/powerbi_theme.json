@@ -1,0 +1,15 @@
+{
+  "name": "Orange Dark OnePager",
+  "dataColors": ["#ff8a00", "#ffb86b", "#ffd9a8", "#c05600", "#6b2b00"],
+  "background": "#0f1720",
+  "foreground": "#e6eef6",
+  "tableAccent": "#ff8a00",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "color": [{"solid": {"color": "#e6eef6"}}],
+        "background": [{"solid": {"color": "#111827"}}]
+      }
+    }
+  }
+}
