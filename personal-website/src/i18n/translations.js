@@ -1,0 +1,225 @@
+export const translations = {
+  en: {
+    nav: {
+      about: 'About',
+      experience: 'Experience',
+      projects: 'Projects',
+      skills: 'Skills',
+      contact: 'Contact',
+    },
+    hero: {
+      name: 'Jonah',
+      subtitle: 'AI Applications / Data Analysis Engineer',
+      tagline:
+        'Experienced in sales analytics, customer segmentation, and AI-powered solutions. Bridging data analysis with LLM applications to deliver production-ready systems.',
+      cta: 'Get in Touch',
+    },
+    about: {
+      label: 'About',
+      title: 'Who I Am',
+      p1: 'Data Analyst with 1.5 years of AI application development and 2 years of data analysis experience, currently working in the manufacturing industry. I specialize in transforming raw business data into actionable insights and building AI-powered automation workflows.',
+      p2: 'Proficient with Pandas/NumPy for end-to-end data processing, familiar with LLM APIs (Tongyi Qianwen, DeepSeek) and Dify for lightweight AI tasks, and capable of wrapping services with FastAPI and deploying with Docker.',
+      location: 'Location',
+      locationVal: 'Jiangmen, Guangdong',
+      email: 'Email',
+      education: 'Education',
+      educationVal: 'NUST · BSc',
+      english: 'English',
+      englishVal: 'CET-6',
+    },
+    experience: {
+      label: 'Experience',
+      title: 'Work History',
+      role: 'Data Analyst (AI Applications)',
+      date: '2024.08 – Present',
+      company: 'Johnson Electric · Manufacturing',
+      bullets: [
+        'Owned sales analytics: extracted data from SQL Server/Excel, cleaned with Pandas, delivered Power BI dashboards',
+        'Built Azure OpenAI knowledge-base Q&A for sales policies and product manuals (chunking, embedding, retrieval)',
+        'Designed Power Automate workflows for automated reporting and data syncing, saving ~15 hours/week',
+        'Collaborated with sales teams to clarify data requirements and explain analysis limitations',
+      ],
+    },
+    projects: {
+      label: 'Projects',
+      title: 'Featured Work',
+      items: [
+        {
+          name: 'Document Classification & Entity Extraction with LLMs',
+          date: '2026.01 – Present',
+          bullets: [
+            'Built Dify workflows calling Tongyi Qianwen to extract fields from sales contracts — ~90% accuracy',
+            'Used DeepSeek API for lead scoring (high/medium/low intent) to prioritize sales follow-ups',
+            'Integrated workflows into internal management portal for sales users',
+          ],
+          tech: 'Tech: Dify, Tongyi Qianwen API, DeepSeek API, FastAPI',
+        },
+        {
+          name: 'RFM Customer Value Analysis',
+          date: '2025.02 – Present',
+          bullets: [
+            'Cleaned ~50k sales orders (3 years): deduplication, 3σ outlier filtering, missing value imputation',
+            'Segmented customers into high-value, potential, and churn groups; delivered Excel reports',
+            'Created trend and contribution charts with Matplotlib/Seaborn',
+          ],
+          tech: 'Tech: Pandas, NumPy, Matplotlib, SQL',
+        },
+        {
+          name: 'Regional Sales Forecasting (Regression)',
+          date: '2025.04 – 2025.07',
+          bullets: [
+            'Engineered time/lag features and built XGBoost regression model — MAPE ~18%',
+            'Exposed FastAPI endpoint for planners to query forecasts; provided feature-importance analysis',
+          ],
+          tech: 'Tech: Pandas, Scikit-learn, XGBoost, FastAPI',
+        },
+        {
+          name: 'Data Pipeline & API Wrapping',
+          date: '2025.10 – 2025.11',
+          bullets: [
+            'Built reusable ETL templates for CSV/Excel cleaning; exposed cleaning logic via FastAPI',
+            'Containerized with Docker and validated endpoints with Postman',
+          ],
+          tech: 'Tech: Python, Pandas, FastAPI, Docker, Git',
+        },
+      ],
+    },
+    skills: {
+      label: 'Skills',
+      title: 'Tech Stack',
+      groups: [
+        {
+          name: 'Data Processing & Analysis',
+          tags: ['Pandas', 'NumPy', 'Matplotlib/Seaborn', 'SQL (MySQL/PostgreSQL)', 'Advanced Excel'],
+        },
+        {
+          name: 'Machine Learning & AI',
+          tags: ['Scikit-learn', 'XGBoost / LightGBM', 'Classification / Regression', 'Feature Engineering', 'Dify', 'Tongyi Qianwen / DeepSeek API'],
+        },
+        {
+          name: 'Engineering & Tools',
+          tags: ['Python', 'FastAPI', 'Docker', 'Git', 'Power BI', 'Power Automate'],
+        },
+      ],
+    },
+    contact: {
+      label: 'Contact',
+      title: 'Get in Touch',
+      text: 'Interested in working together? Reach out via email.',
+      email: 'Email',
+    },
+    footer: 'Built with React & Motion.',
+  },
+
+  zh: {
+    nav: {
+      about: '关于',
+      experience: '经历',
+      projects: '项目',
+      skills: '技能',
+      contact: '联系',
+    },
+    hero: {
+      name: 'Jonah',
+      subtitle: 'AI 应用 / 数据分析工程师',
+      tagline:
+        '拥有销售分析、客户细分和 AI 驱动解决方案的经验。将数据分析与 LLM 应用相结合，交付生产级系统。',
+      cta: '联系我',
+    },
+    about: {
+      label: '关于',
+      title: '我是谁',
+      p1: '1.5 年 AI 应用开发经验和 2 年数据分析经验的数据分析师，目前在制造业工作。我专注于将原始业务数据转化为可操作的洞察，并构建 AI 驱动的自动化工作流。',
+      p2: '熟练使用 Pandas/NumPy 进行端到端数据处理，熟悉 LLM API（通义千问、DeepSeek）和 Dify 平台进行轻量级 AI 任务开发，能够使用 FastAPI 封装服务并通过 Docker 部署。',
+      location: '所在地',
+      locationVal: '广东 · 江门',
+      email: '邮箱',
+      education: '学历',
+      educationVal: '南京理工大学 · 本科',
+      english: '英语',
+      englishVal: 'CET-6',
+    },
+    experience: {
+      label: '经历',
+      title: '工作经历',
+      role: '数据分析师（AI 应用方向）',
+      date: '2024.08 – 至今',
+      company: '德昌电机 · 制造业',
+      bullets: [
+        '负责销售分析：从 SQL Server/Excel 提取数据，使用 Pandas 清洗，交付 Power BI 仪表板',
+        '构建 Azure OpenAI 知识库问答系统，覆盖销售政策和产品手册（文档分块、向量嵌入、检索）',
+        '设计 Power Automate 自动化工作流，实现报表自动生成和数据同步，每周节省约 15 小时',
+        '与销售团队协作，明确数据需求并解释分析局限性',
+      ],
+    },
+    projects: {
+      label: '项目',
+      title: '精选项目',
+      items: [
+        {
+          name: '基于 LLM 的文档分类与实体抽取',
+          date: '2026.01 – 至今',
+          bullets: [
+            '构建 Dify 工作流，调用通义千问从销售合同中提取字段 — 准确率约 90%',
+            '使用 DeepSeek API 进行线索评分（高/中/低意向），优先安排销售跟进',
+            '将工作流集成到内部管理平台，供销售团队使用',
+          ],
+          tech: '技术栈: Dify, 通义千问 API, DeepSeek API, FastAPI',
+        },
+        {
+          name: 'RFM 客户价值分析',
+          date: '2025.02 – 至今',
+          bullets: [
+            '清洗约 5 万条销售订单（3 年数据）：去重、3σ 异常值过滤、缺失值填补',
+            '将客户分为高价值、潜力和流失群体；交付 Excel 分析报告',
+            '使用 Matplotlib/Seaborn 创建趋势图和贡献度图表',
+          ],
+          tech: '技术栈: Pandas, NumPy, Matplotlib, SQL',
+        },
+        {
+          name: '区域销售预测（回归模型）',
+          date: '2025.04 – 2025.07',
+          bullets: [
+            '构建时间/滞后特征，建立 XGBoost 回归模型 — MAPE ~18%',
+            '通过 FastAPI 暴露预测接口供计划人员查询；提供特征重要性分析',
+          ],
+          tech: '技术栈: Pandas, Scikit-learn, XGBoost, FastAPI',
+        },
+        {
+          name: '数据管道与 API 封装',
+          date: '2025.10 – 2025.11',
+          bullets: [
+            '构建可复用的 CSV/Excel 清洗 ETL 模板；通过 FastAPI 暴露数据清洗接口',
+            '使用 Docker 容器化部署，Postman 验证接口',
+          ],
+          tech: '技术栈: Python, Pandas, FastAPI, Docker, Git',
+        },
+      ],
+    },
+    skills: {
+      label: '技能',
+      title: '技术栈',
+      groups: [
+        {
+          name: '数据处理与分析',
+          tags: ['Pandas', 'NumPy', 'Matplotlib/Seaborn', 'SQL (MySQL/PostgreSQL)', 'Advanced Excel'],
+        },
+        {
+          name: '机器学习与 AI',
+          tags: ['Scikit-learn', 'XGBoost / LightGBM', '分类 / 回归', '特征工程', 'Dify', '通义千问 / DeepSeek API'],
+        },
+        {
+          name: '工程与工具',
+          tags: ['Python', 'FastAPI', 'Docker', 'Git', 'Power BI', 'Power Automate'],
+        },
+      ],
+    },
+    contact: {
+      label: '联系',
+      title: '联系我',
+      text: '有兴趣合作吗？欢迎通过邮件联系。',
+      email: '邮箱',
+    },
+    footer: '使用 React & Motion 构建。',
+  },
+};
