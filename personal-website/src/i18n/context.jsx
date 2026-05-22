@@ -2,7 +2,6 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 import { translations as fallback } from './translations';
 
 const I18nContext = createContext();
-const CACHE_KEY = 'site_content_v1';
 const CONTENT_URL = import.meta.env.BASE_URL + 'content.json';
 
 export function I18nProvider({ children }) {
@@ -14,21 +13,11 @@ export function I18nProvider({ children }) {
     }
   });
 
-  const [content, setContent] = useState(() => {
-    // Load cached content instantly so there's zero flash
-    try {
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        if (parsed.en && parsed.zh) return parsed;
-      }
-    } catch {}
-    return fallback;
-  });
+  const [content, setContent] = useState(fallback);
 
   useEffect(() => {
-    // Fetch fresh content in background, update if changed
-    fetch(CONTENT_URL)
+    // Fetch fresh content every page load — no cache, no stale data
+    fetch(CONTENT_URL + '?v=' + Date.now())
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -36,13 +25,10 @@ export function I18nProvider({ children }) {
       .then((data) => {
         if (data.en && data.zh) {
           setContent(data);
-          try {
-            localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-          } catch {}
         }
       })
       .catch(() => {
-        // Content fetch failed — keep using current (cached or fallback)
+        // Fetch failed — keep using bundled fallback
       });
   }, []);
 
