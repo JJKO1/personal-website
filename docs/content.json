@@ -101,6 +101,52 @@
         }
       ]
     },
+    "feed": {
+      "label": "AI Radar",
+      "title": "What I'm Reading",
+      "items": [
+        {
+          "title": "DeepSeek V3: Expanding the Frontier of Open-Source LLMs",
+          "description": "DeepSeek released V3 with Mixture-of-Experts architecture, rivaling GPT-4 at a fraction of training cost. A milestone for open-source AI.",
+          "source": "DeepSeek Blog",
+          "date": "2026.04",
+          "url": "https://api-docs.deepseek.com/",
+          "tag": "LLM"
+        },
+        {
+          "title": "Dify: The Open-Source LLM App Development Platform",
+          "description": "Dify provides visual workflow orchestration, RAG pipeline, and agent capabilities — enabling rapid prototyping of AI applications without deep ML expertise.",
+          "source": "GitHub",
+          "date": "2026.05",
+          "url": "https://github.com/langgenius/dify",
+          "tag": "Tool"
+        },
+        {
+          "title": "MCP Protocol: Standardizing LLM-Tool Interaction",
+          "description": "Anthropic's Model Context Protocol is gaining traction as the universal interface between LLMs and external tools/data sources.",
+          "source": "Anthropic",
+          "date": "2026.03",
+          "url": "https://modelcontextprotocol.io/",
+          "tag": "Protocol"
+        },
+        {
+          "title": "RAG 2.0: Agentic Retrieval with Self-Correction",
+          "description": "New research shows agentic RAG systems with self-reflection loops reduce hallucination rates by 40% compared to standard retrieval.",
+          "source": "arXiv",
+          "date": "2026.05",
+          "url": "https://arxiv.org/",
+          "tag": "RAG"
+        },
+        {
+          "title": "Ollama: Running LLMs Locally with One Command",
+          "description": "Ollama makes local LLM deployment trivial — supporting DeepSeek, Llama, Qwen and more. Essential for privacy-sensitive enterprise use cases.",
+          "source": "GitHub",
+          "date": "2026.04",
+          "url": "https://github.com/ollama/ollama",
+          "tag": "Tool"
+        }
+      ]
+    },
     "contact": {
       "label": "Contact",
       "title": "Get in Touch",
@@ -209,6 +255,52 @@
         {
           "name": "工程与工具",
           "tags": ["Python", "FastAPI", "Docker", "Git", "Power BI", "Power Automate"]
+        }
+      ]
+    },
+    "feed": {
+      "label": "AI 雷达",
+      "title": "最近在看",
+      "items": [
+        {
+          "title": "DeepSeek V3：开源大模型的新标杆",
+          "description": "DeepSeek 发布 V3，采用 MoE 混合专家架构，性能比肩 GPT-4，训练成本仅为几分之一。开源 AI 的里程碑事件。",
+          "source": "DeepSeek 博客",
+          "date": "2026.04",
+          "url": "https://api-docs.deepseek.com/",
+          "tag": "LLM"
+        },
+        {
+          "title": "Dify：开源 LLM 应用开发平台",
+          "description": "Dify 提供可视化工作流编排、RAG 管道和 Agent 能力，无需深厚 ML 背景即可快速构建 AI 应用原型。",
+          "source": "GitHub",
+          "date": "2026.05",
+          "url": "https://github.com/langgenius/dify",
+          "tag": "工具"
+        },
+        {
+          "title": "MCP 协议：标准化 LLM 与工具的交互",
+          "description": "Anthropic 推出的模型上下文协议（MCP）正成为 LLM 与外部工具/数据源交互的通用接口标准。",
+          "source": "Anthropic",
+          "date": "2026.03",
+          "url": "https://modelcontextprotocol.io/",
+          "tag": "协议"
+        },
+        {
+          "title": "RAG 2.0：带自我纠错的智能检索",
+          "description": "最新研究表明，带有自我反思循环的 Agentic RAG 系统相比标准检索，幻觉率降低 40%。",
+          "source": "arXiv",
+          "date": "2026.05",
+          "url": "https://arxiv.org/",
+          "tag": "RAG"
+        },
+        {
+          "title": "Ollama：一键本地运行大模型",
+          "description": "Ollama 让本地部署 LLM 变得极其简单，支持 DeepSeek、Llama、Qwen 等主流模型，适合隐私敏感的企业场景。",
+          "source": "GitHub",
+          "date": "2026.04",
+          "url": "https://github.com/ollama/ollama",
+          "tag": "工具"
         }
       ]
     },

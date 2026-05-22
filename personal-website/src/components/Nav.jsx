@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useI18n } from '../i18n/context';
 
-const links = ['about', 'experience', 'projects', 'skills', 'contact'];
+const links = ['about', 'experience', 'projects', 'skills', 'feed', 'contact'];
 
 export default function Nav() {
   const { t, lang, toggleLang } = useI18n();

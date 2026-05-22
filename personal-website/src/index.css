@@ -529,6 +529,87 @@ section:not(.hero)::before {
   background: #1c3050;
 }
 
+/* ===== Feed / AI Radar ===== */
+.feed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.feed-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(126, 184, 218, 0.2);
+  transform: translateY(-3px);
+}
+
+.feed-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feed-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--tag-bg);
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.feed-date {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.feed-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.feed-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.feed-source {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 500;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 650px) {
+  .feed-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Contact ===== */
 .contact-section {
   padding-bottom: 100px;
