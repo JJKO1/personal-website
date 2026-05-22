@@ -17,16 +17,16 @@ const { t } = Astro.props;
 
 <section id="projects">
   <div class="container">
-    <p class="section-label">{t.label}</p>
-    <h2 class="section-title">{t.title}</h2>
+    <p class="section-label" data-animate>{t.label}</p>
+    <h2 class="section-title" data-animate>{t.title}</h2>
     {t.items.map((proj) => (
-      <div class="project-card">
+      <div class="project-card" data-animate>
         <div class="project-header">
           <span class="project-name">{proj.name}</span>
           <span class="timeline-date">{proj.date}</span>
         </div>
         <ul class="timeline-desc">
-          {proj.bullets.map((b) => <li>{b}</li>)}
+          {proj.bullets.map((b) => <li data-stagger>{b}</li>)}
         </ul>
         <p class="project-tech">{proj.tech}</p>
       </div>

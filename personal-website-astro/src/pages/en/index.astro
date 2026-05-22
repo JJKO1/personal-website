@@ -1,7 +1,7 @@
 ---
 import { translations } from '../../i18n/index';
 import Base from '../../layouts/Base.astro';
-import Hero from '../../components/Hero.astro';
+import HeroMotion from '../../components/HeroMotion';
 import About from '../../components/About.astro';
 import Experience from '../../components/Experience.astro';
 import Projects from '../../components/Projects.astro';
@@ -13,7 +13,7 @@ const t = translations.en;
 ---
 
 <Base lang="en">
-  <Hero t={t.hero} />
+  <HeroMotion t={t.hero} client:load />
   <About t={t.about} />
   <Experience t={t.experience} />
   <Projects t={t.projects} />

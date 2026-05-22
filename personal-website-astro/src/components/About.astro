@@ -20,14 +20,14 @@ const { t } = Astro.props;
 
 <section id="about">
   <div class="container">
-    <p class="section-label">{t.label}</p>
-    <h2 class="section-title">{t.title}</h2>
+    <p class="section-label" data-animate>{t.label}</p>
+    <h2 class="section-title" data-animate>{t.title}</h2>
     <div class="about-grid">
-      <div class="about-text">
+      <div class="about-text" data-animate>
         <p>{t.p1}</p>
         <p>{t.p2}</p>
       </div>
-      <ul class="info-list">
+      <ul class="info-list" data-animate>
         <li><span class="info-label">{t.location}</span><strong>{t.locationVal}</strong></li>
         <li><span class="info-label">{t.email}</span><strong>1625963557@qq.com</strong></li>
         <li><span class="info-label">{t.english}</span><strong>{t.englishVal}</strong></li>

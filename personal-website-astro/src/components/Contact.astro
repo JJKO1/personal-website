@@ -13,10 +13,10 @@ const { t } = Astro.props;
 
 <section id="contact" class="contact-section">
   <div class="container contact-center">
-    <p class="section-label">{t.label}</p>
-    <h2 class="section-title">{t.title}</h2>
-    <p style="color: var(--muted); margin-bottom: 24px;">{t.text}</p>
-    <div class="contact-links">
+    <p class="section-label" data-animate>{t.label}</p>
+    <h2 class="section-title" data-animate>{t.title}</h2>
+    <p style="color: var(--muted); margin-bottom: 24px;" data-animate>{t.text}</p>
+    <div class="contact-links" data-animate>
       <a href="mailto:1625963557@qq.com" class="contact-link">{t.email}</a>
     </div>
   </div>

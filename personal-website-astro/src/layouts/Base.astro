@@ -19,6 +19,8 @@ const { lang } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Astro View Transitions: smooth page switch between en/zh -->
+    <meta name="astro-view-transitions-fallback" content="animate" />
   </head>
   <body>
     <StarryBackground client:load />
@@ -26,5 +28,22 @@ const { lang } = Astro.props;
       <Nav lang={lang} />
       <slot />
     </div>
+    <!-- Scroll-triggered fade-in animations -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Stagger children
+            entry.target.querySelectorAll?.('[data-stagger]').forEach((el, i) => {
+              el.style.transitionDelay = `${i * 0.08}s`;
+              el.classList.add('visible');
+            });
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>
