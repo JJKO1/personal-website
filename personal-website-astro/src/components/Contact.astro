@@ -1,0 +1,23 @@
+---
+export interface Props {
+  t: {
+    label: string;
+    title: string;
+    text: string;
+    email: string;
+  };
+}
+
+const { t } = Astro.props;
+---
+
+<section id="contact" class="contact-section">
+  <div class="container contact-center">
+    <p class="section-label">{t.label}</p>
+    <h2 class="section-title">{t.title}</h2>
+    <p style="color: var(--muted); margin-bottom: 24px;">{t.text}</p>
+    <div class="contact-links">
+      <a href="mailto:1625963557@qq.com" class="contact-link">{t.email}</a>
+    </div>
+  </div>
+</section>

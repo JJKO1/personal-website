@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+import StarryBackground from '../components/StarryBackground';
+import Nav from '../components/Nav.astro';
+
+export interface Props {
+  lang: 'en' | 'zh';
+}
+
+const { lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonah - AI Applications & Data Analysis Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <StarryBackground client:load />
+    <div class="content">
+      <Nav lang={lang} />
+      <slot />
+    </div>
+  </body>
+</html>
