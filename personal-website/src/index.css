@@ -34,7 +34,7 @@ html {
 body {
   font-family: 'Inter', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', 'Segoe UI', system-ui, -apple-system, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: #050a12;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -193,8 +193,8 @@ button:focus-visible {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 45%, rgba(10, 15, 26, 0.55) 0%, rgba(10, 15, 26, 0.3) 50%, transparent 100%),
-    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(18, 30, 50, 0.6) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 60% at 50% 45%, rgba(10, 15, 26, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(10, 15, 26, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -204,7 +204,7 @@ button:focus-visible {
   color: #ffffff;
   margin-bottom: 10px;
   letter-spacing: -0.02em;
-  text-shadow: 0 0 80px rgba(150, 200, 240, 0.25), 0 0 20px rgba(150, 200, 240, 0.12);
+  text-shadow: 0 0 120px rgba(150, 200, 240, 0.4), 0 0 40px rgba(150, 200, 240, 0.2), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
@@ -212,7 +212,7 @@ button:focus-visible {
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 16px;
-  text-shadow: 0 0 40px rgba(126, 184, 218, 0.2);
+  text-shadow: 0 0 60px rgba(126, 184, 218, 0.35), 0 0 20px rgba(126, 184, 218, 0.18), 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-tagline {
@@ -220,7 +220,7 @@ button:focus-visible {
   margin: 0 auto 32px;
   color: var(--muted);
   font-size: 1rem;
-  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero-cta {
@@ -285,16 +285,8 @@ section {
   position: relative;
 }
 
-/* Solid backgrounds for readability — stars show through hero only */
-section:nth-child(even) {
-  background: var(--bg);
-}
-
-section:nth-child(odd):not(.hero) {
-  background: var(--card);
-}
-
-/* Subtle top border on sections to create separation without harsh lines */
+/* Transparent backgrounds — stars show through everywhere */
+/* Visual separation via top border only */
 section:not(.hero)::before {
   content: '';
   position: absolute;
@@ -454,7 +446,9 @@ section:not(.hero)::before {
 
 /* ===== Projects ===== */
 .project-card {
-  background: var(--bg-card);
+  background: rgba(15, 25, 38, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 28px;
@@ -537,7 +531,9 @@ section:not(.hero)::before {
 }
 
 .feed-card {
-  background: var(--bg-card);
+  background: rgba(15, 25, 38, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 22px;
